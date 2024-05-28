@@ -13,7 +13,7 @@ const TAB_DATA = [
         <li>Next.js</li>
         <li>Python</li>
         <li>JavaScript</li>
-        <li>Tailwind css</li>
+        <li>Tailwind CSS</li>
       </ul>
     ),
   },
@@ -22,7 +22,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2 text-[#a2a0a0]">
-        <li>New life christian academy</li>
+        <li>New life Christian Academy</li>
         <li>Udemy</li>
       </ul>
     ),
@@ -43,7 +43,7 @@ const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (id) => {
+  const handleTabChange = (id: string) => {
     startTransition(() => {
       setTab(id);
     });
@@ -52,15 +52,21 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-6 items-center py-8 lg:ml-16 xl:gap-16 sm:py-16 xl:px-16">
-        <Image className="rounded-[50%] " src="/images/projects/conta.jpg" width={200} height={200} />
+        <Image
+          className="rounded-[50%]"
+          src="/images/projects/conta.jpg"
+          width={200}
+          height={200}
+          alt="About Image"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-[1.3rem] font-medium text-[#fff] mb-4">About Me</h2>
           <p className="text-base lg:text-[1rem] text-[#aaa8a8]">
-            I am a front end web developer with a passion for creating
-            interactive and responsive web applications.I have experience
-            working with JavaScript, React, Next js,Tailwind
+            I am a front-end web developer with a passion for creating
+            interactive and responsive web applications. I have experience
+            working with JavaScript, React, Next.js, Tailwind CSS,
             HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set.I am a team player and
+            looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>
 
@@ -69,26 +75,23 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
-              Certifications{" "}
+              Certifications
             </TabButton>
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {TAB_DATA.find((t) => t.id === tab)?.content}
           </div>
         </div>
       </div>
