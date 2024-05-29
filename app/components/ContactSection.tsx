@@ -14,7 +14,7 @@ const ContactSection = () => {
         </p>
       </div>
 
-      <form className="max-w-[80%] lg:w-1/2 ">
+      <form name='contact' method="POST" data-netlify="true"  className="max-w-[80%] lg:w-1/2 ">
       <div className="relative z-0 w-full mb-5 group">
         <input
           type="email"
