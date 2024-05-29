@@ -10,39 +10,40 @@ const projectData =[
     title: "KglSites",
     description: "A prototype web app where users can find web templates that are arleady developed",
     imgUrl: "/images/projects/Group17.png",
+    linkPath: "https://github.com/conta09/kigali-sites.git",
    
   },
   {
     id: 2,
     title: "The Idea Hub",
     description: "An online suggestion box where users can submit their ideas anonymously, ensuring honest and unbiased input.",
-    imgUrl: "/images/projects/1.png",
-    
-  },
-  {
-    id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    imgUrl: "/images/projects/3.png",
+    imgUrl: "/images/projects/thebox.png",
+    linkPath: "https://github.com/conta09/chat-room.git",
+
   },
   
   {
-    id: 4,
+    id: 3,
     title: "Easy Lend",
     description: "A web page where users can apply for a loan when they meet the requirements",
     imgUrl: "/images/projects/profile1.png",
+    linkPath: "https://main--easy-lend.netlify.app",
+
+  },
+  {
+    id: 4,
+    title: "Fast Food design",
+    description: "Landing page design of a fast food reataurant in kigali,which showcases the menu and prices of the resto",
+    imgUrl: "/images/projects/Group2.png",
+    linkPath: "",
+
   },
   {
     id: 5,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    imgUrl: "/images/projects/5.png",
-  },
-  {
-    id: 6,
     title: "Tigo site",
     description: "Hero section UI design of the current telecommunication network tigo",
     imgUrl: "/images/projects/Group66.png",
+    linkPath: "",
   },
  
 
@@ -61,6 +62,7 @@ const ProjectSection = () => {
           <ProjectCard
             key={project.id}
             imageUrl={project.imgUrl}
+            linkPath={project.linkPath}
             title={project.title}
             description={project.description}
           />

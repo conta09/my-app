@@ -4,10 +4,11 @@ import React from "react";
 interface ProjectCardProps {
   imageUrl: string;
   title: string;
+  linkPath: string;
   description: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, title, description }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, linkPath, title, description }) => {
   return (
     <div className="lg:w-1/3 md:w-2/4 sm:w-[80%] py-3 px-3">
       <div
@@ -17,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, title, description 
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
           <div>
-            <h3 className="text-xl font-semibold">{title}</h3>
+            <a href={linkPath}><h3 className="text-xl font-semibold text-[#ffbf58]">{title}</h3></a>
             <p className="mt-2">{description}</p>
           </div>
         </div>

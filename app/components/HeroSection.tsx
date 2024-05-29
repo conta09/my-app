@@ -32,12 +32,12 @@ const HeroSection = () => {
         <p className='text-[#717171]'>Available for work</p>
       </span>
       <div className="flex text-[#aeadad] border-[#908d8d] my-auto">
-        <CiLinkedin size={30} />
-        <IoLogoGithub size={20} className="mt-1 mx-2" />
-        <IoLogoInstagram size={20} className="mt-1 mx-2" />
+        <a href="https://www.linkedin.com/in/mucyo-conta-54619a171/"><CiLinkedin size={30} /></a>
+        <a href="https://github.com/conta09"> <IoLogoGithub size={20} className="mt-1 mx-2" /></a>
+        <a href="https://www.instagram.com/conta__m/"><IoLogoInstagram size={20} className="mt-1 mx-2" /></a>
       </div>
       <p className='font-light text-[#aeadad] lg:w-1/3'>
-        In the last 2 years, I&apos;ve specialized in web and data analytics for clients ranging from startups to Fortune 500 companies, and everything in between
+        In the last 1 year, I&apos;ve specialized in web development,UI/UX design and everything in between
       </p>
     </div>
   

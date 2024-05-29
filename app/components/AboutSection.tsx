@@ -32,8 +32,9 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2 text-[#a2a0a0]">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Python bootcamp certificate</li>
+        <li>Full stack web development certificate</li>
+        <li>Python for data science and ML</li>
       </ul>
     ),
   },
