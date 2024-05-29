@@ -51,10 +51,10 @@ const projectData =[
 const ProjectSection = () => {
   return (
     <>
-      <p className="lg:text-[2rem] lg:ml-20 sm:text-center text-2xl font-medium text-[#ED9911] my-5  ">Featured Work</p>
+      <p className="lg:text-[2rem] lg:ml-20 text-center text-2xl font-medium text-[#ED9911] my-5  ">Featured Work</p>
 
     <section id="projects" className='flex justify-center '>
-      <div className="flex flex-wrap  justify-center w-[90%]  ">
+      <div className="flex flex-col  lg:flex-row md:flex-wrap  justify-center w-[90%]  ">
 
 
       {projectData.map((project) => (

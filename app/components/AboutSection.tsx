@@ -53,7 +53,7 @@ const AboutSection = () => {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-6 items-center py-8 lg:ml-16 xl:gap-16 sm:py-16 xl:px-16">
         <Image
-          className="rounded-[50%]"
+          className="rounded-[50%] sm:text-center"
           src="/images/projects/conta.jpg"
           width={200}
           height={200}
