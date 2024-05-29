@@ -8,8 +8,8 @@ import { FaCircle } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <div className="h-[80vh]  flex flex-col justify-center lg:ml-20">
-      <h1 className="lg:w-[70%]  text-white text-7xl sm:4xl lg:leading-snug my-auto">
+    <div className="h-[80vh]  flex flex-col justify-center lg:ml-20 mx-5">
+      <h1 className="lg:w-[70%]   text-white text-7xl sm:4xl lg:leading-snug my-auto">
         <span className="font-normal text-5xl text-white text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-secondary-500">
           Hello, I&apos;m {"Conta "}
         </span>

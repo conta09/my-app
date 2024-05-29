@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
-    <div className='flex lg:mx-20 pt-4'>
+    <div className='mx-20 pt-4 w-[90%] '>
       <div className="pt-4">
         <h1 className='font-normal text-[2.5rem] text-white'>Let&apos;s Chat</h1>
         <p className='my-5 w-2/3 font-medium text-[#878686]'>
@@ -14,7 +14,7 @@ const ContactSection = () => {
         </p>
       </div>
 
-      <form className="max-w-md mx-auto w-1/2 ">
+      <form className="max-w-[80%] lg:w-1/2 ">
       <div className="relative z-0 w-full mb-5 group">
         <input
           type="email"
