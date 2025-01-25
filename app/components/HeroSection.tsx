@@ -8,40 +8,53 @@ import { FaCircle } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <div className="h-[80vh]  flex flex-col justify-center lg:ml-20 mx-5">
-      <h1 className="lg:w-[70%]   text-white text-7xl sm:4xl lg:leading-snug my-auto">
-        <span className="font-normal text-5xl text-white text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-secondary-500">
-          Hello, I&apos;m {"Conta "}
-        </span>
-        <br></br>
-        <TypeAnimation
-          className='font-medium tracking-tight text-[#ED9911]'
-          sequence={[
-            "Web Developer",
-            1000,
-            "UI/UX Designer",
-            1000,
-          ]}
-          wrapper="span"
-          speed={50}
-          repeat={Infinity}
-        />
-      </h1>
-      <span className='flex'>
-        <FaCircle size={10} className='text-[#83ef93] mt-2 mx-2 hover:text-[#93f9a3]' />
-        <p className='text-[#717171]'>Available for work</p>
-      </span>
-      <div className="flex text-[#aeadad] border-[#908d8d] my-auto">
-        <a href="https://www.linkedin.com/in/mucyo-conta-54619a171/"><CiLinkedin size={30} /></a>
-        <a href="https://github.com/conta09"> <IoLogoGithub size={20} className="mt-1 mx-2" /></a>
-        <a href="https://www.instagram.com/conta__m/"><IoLogoInstagram size={20} className="mt-1 mx-2" /></a>
+    <section className="min-h-screen flex items-center px-6 lg:px-20 py-24">
+      <div className="max-w-4xl space-y-8">
+        <div className="flex items-center space-x-3 mb-6">
+          <FaCircle className="text-[#83ef93] animate-pulse" />
+          <span className="text-[#717171] font-medium">Available for work</span>
+        </div>
+
+        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+          Hello, I'm <span className="text-[#ED9911]">Conta</span>
+          <br />
+          <TypeAnimation
+            sequence={[
+              "Web Developer",
+              1000,
+              "Automation expert",
+              1000,
+              "UI/UX Designer",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#ED9911] to-[#ffbf69]"
+            repeat={Infinity}
+          />
+        </h1>
+
+        <p className="text-xl text-[#aeadad] max-w-2xl leading-relaxed">
+          Specializing in crafting beautiful, functional web experiences with modern technologies. 
+          Passionate about turning ideas into interactive reality.
+        </p>
+
+        <div className="flex space-x-6 items-center mt-8">
+          <a href="https://www.linkedin.com/in/mucyo-conta-54619a171/" 
+             className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10">
+            <CiLinkedin className="text-2xl text-[#aeadad] hover:text-[#ED9911]" />
+          </a>
+          <a href="https://github.com/conta09" 
+             className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10">
+            <IoLogoGithub className="text-2xl text-[#aeadad] hover:text-[#ED9911]" />
+          </a>
+          <a href="https://www.instagram.com/conta__m/" 
+             className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10">
+            <IoLogoInstagram className="text-2xl text-[#aeadad] hover:text-[#ED9911]" />
+          </a>
+        </div>
       </div>
-      <p className='font-light text-[#aeadad] lg:w-1/3'>
-        In the last 1 year, I&apos;ve specialized in web development,UI/UX design and everything in between
-      </p>
-    </div>
-  
-    
+    </section>
   )
 }
 

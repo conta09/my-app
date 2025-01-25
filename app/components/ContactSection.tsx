@@ -1,76 +1,101 @@
-import React from 'react';
-import { FaCircle } from "react-icons/fa";
-import { MdOutlineBookmarks } from "react-icons/md";
-import { IoCopyOutline } from "react-icons/io5";
-import { FaInstagram } from "react-icons/fa";
+"use client"
+import React, { useState } from 'react';
 
 const ContactSection = () => {
-  return (
-    <div className='mx-20 pt-4 w-[90%] '>
-      <div className="pt-4">
-        <h1 className='font-normal text-[2.5rem] text-white'>Let&apos;s Chat</h1>
-        <p className='my-5 w-2/3 font-medium text-[#878686]'>
-          I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
-        </p>
-      </div>
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-      <form name='contact' method="POST" data-netlify="true"  className="max-w-[80%] lg:w-1/2 ">
-      <div className="relative z-0 w-full mb-5 group">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-          placeholder=" "
-          required
-        />
-        <label
-          htmlFor="email"
-          className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >
-          Email address
-        </label>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
+  return (
+    <section className="py-20 px-6 lg:px-20 bg-[#1a1a1a]">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-8">Let's Collaborate</h2>
+        
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="relative">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                className="w-full px-4 py-3 bg-[#2a2a2a] border border-[#3d3d3d] rounded-lg focus:ring-2 focus:ring-[#ED9911] focus:border-transparent outline-none text-white transition-all"
+                placeholder=" "
+                required
+              />
+              <label 
+                htmlFor="name" 
+                className="absolute left-4 top-3 text-[#717171] pointer-events-none transition-all"
+              >
+                Name
+              </label>
+            </div>
+
+            <div className="relative">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                className="w-full px-4 py-3 bg-[#2a2a2a] border border-[#3d3d3d] rounded-lg focus:ring-2 focus:ring-[#ED9911] focus:border-transparent outline-none text-white transition-all"
+                placeholder=" "
+                required
+              />
+              <label 
+                htmlFor="email" 
+                className="absolute left-4 top-3 text-[#717171] pointer-events-none transition-all"
+              >
+                Email
+              </label>
+            </div>
+          </div>
+
+          <div className="relative">
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={(e) => setFormData({...formData, message: e.target.value})}
+              className="w-full px-4 py-3 bg-[#2a2a2a] border border-[#3d3d3d] rounded-lg focus:ring-2 focus:ring-[#ED9911] focus:border-transparent outline-none text-white h-40 resize-none transition-all"
+              placeholder=" "
+              required
+            />
+            <label 
+              htmlFor="message" 
+              className="absolute left-4 top-3 text-[#717171] pointer-events-none transition-all"
+            >
+              Message
+            </label>
+          </div>
+
+          <button 
+            type="submit"
+            className="w-full md:w-auto px-8 py-3 bg-[#ED9911] hover:bg-[#ffbf69] text-white font-medium rounded-lg transition-colors duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+
+        {submitted && (
+          <div className="mt-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-500 animate-fade-in">
+            Message sent successfully! 🎉
+          </div>
+        )}
       </div>
-      <div className="relative z-0 w-full mb-5 group">
-        <input
-          type="text"
-          name="name"
-          id="name"
-          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-          placeholder=" "
-          required
-        />
-        <label
-          htmlFor="name"
-          className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >
-          Name
-        </label>
-      </div>
-      <div className="relative z-0 w-full mb-5 group">
-        <textarea
-          name="message"
-          id="message"
-          className="block py-2.5 px-0 w-full h-20 text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-          placeholder=" "
-          required
-        />
-        <label
-          htmlFor="message"
-          className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >
-          Message
-        </label>
-      </div>
-      <button
-        type="submit"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Submit
-      </button>
-    </form>
-    </div>
+    </section>
   );
-}
+};
 
 export default ContactSection;
