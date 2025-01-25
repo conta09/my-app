@@ -11,7 +11,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your form submission logic here
+    // MONGODB_URI=mongodb+srv://gblue1899:efQfRncEjHrCTvCk@cluster0.py0kkcl.mongodb.net/omegabot
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
