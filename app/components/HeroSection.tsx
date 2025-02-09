@@ -1,6 +1,6 @@
 "use client";
-import React from 'react'
-import { TypeAnimation } from 'react-type-animation';
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
 import { CiLinkedin } from "react-icons/ci";
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -16,7 +16,7 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-          Hello, I'm <span className="text-[#ED9911]">Conta</span>
+          Hello, I&apos;m <span className="text-[#ED9911]">Conta</span>
           <br />
           <TypeAnimation
             sequence={[
@@ -35,27 +35,33 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-xl text-[#aeadad] max-w-2xl leading-relaxed">
-          Specializing in crafting beautiful, functional web experiences with modern technologies. 
+          Specializing in crafting beautiful, functional web experiences with modern technologies.
           Passionate about turning ideas into interactive reality.
         </p>
 
         <div className="flex space-x-6 items-center mt-8">
-          <a href="https://www.linkedin.com/in/mucyo-conta-54619a171/" 
-             className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10">
+          <a
+            href="https://www.linkedin.com/in/mucyo-conta-54619a171/"
+            className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10"
+          >
             <CiLinkedin className="text-2xl text-[#aeadad] hover:text-[#ED9911]" />
           </a>
-          <a href="https://github.com/conta09" 
-             className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10">
+          <a
+            href="https://github.com/conta09"
+            className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10"
+          >
             <IoLogoGithub className="text-2xl text-[#aeadad] hover:text-[#ED9911]" />
           </a>
-          <a href="https://www.instagram.com/conta__m/" 
-             className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10">
+          <a
+            href="https://www.instagram.com/conta__m/"
+            className="p-3 rounded-full border border-[#3d3d3d] hover:border-[#ED9911] transition-all hover:bg-[#ED9911]/10"
+          >
             <IoLogoInstagram className="text-2xl text-[#aeadad] hover:text-[#ED9911]" />
           </a>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default HeroSection;
