@@ -5,6 +5,7 @@ import ContactSection from "./components/ContactSection";
 import Navbar from "./components/Navbar";
 import ToolStack from "./components/ToolStack";
 import AboutSection from "./components/AboutSection";
+import DesignSection from "./components/DesignSection";
 export default function Home() {
   return (
    <main className="bg-[#121212]">
@@ -12,6 +13,7 @@ export default function Home() {
      <HeroSection />
       <AboutSection />
      <ProjectSection />
+     <DesignSection />
      <ToolStack />
      <ContactSection />
      <Footer />

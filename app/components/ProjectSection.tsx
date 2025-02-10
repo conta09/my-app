@@ -51,28 +51,28 @@ const projectData =[
 
 const ProjectSection = () => {
   return (
-    <>
-      <p className="lg:text-[2rem] lg:ml-20 text-center text-2xl font-medium text-[#ED9911] my-5  ">Featured Work</p>
+    <section id="projects" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-950 to-gray-900
+">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
+          Featured Work
+          <span className="block w-16 h-1 bg-[#FFBF58] mt-2 mx-auto"></span>
+        </h2>
 
-    <section id="projects" className='flex justify-center '>
-      <div className="flex flex-col  lg:flex-row md:flex-wrap  justify-center w-[90%]  ">
-
-
-      {projectData.map((project) => (
-          <ProjectCard
-            key={project.id}
-            imageUrl={project.imgUrl}
-            linkPath={project.linkPath}
-            title={project.title}
-            description={project.description}
-          />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              imageUrl={project.imgUrl}
+              linkPath={project.linkPath}
+              title={project.title}
+              description={project.description}
+            />
+          ))}
+        </div>
       </div>
-    
     </section>
-    </>
+  );
+};
 
-  )
-}
-
-export default ProjectSection
+export default ProjectSection;
