@@ -12,13 +12,13 @@ interface DesignItem {
 const designData: DesignItem[] = [
   {
     id: 1,
-    title: "Mobile App Design",
+    title: "UI App Design",
     category: "UI/UX",
-    imgUrl: "/images/projects/Group2.png",
+    imgUrl: "/images/projects/profile1.png",
   },
   {
     id: 2,
-    title: "Dashboard Concept",
+    title: "Homepage Concept",
     category: "Web",
     imgUrl: "/images/projects/Group66.png",
   },
@@ -26,13 +26,13 @@ const designData: DesignItem[] = [
     id: 3,
     title: "Brand Identity",
     category: "Graphic",
-    imgUrl: "/images/projects/profile1.png",
+    imgUrl: "/images/projects/Group2.png",
   },
   {
     id: 4,
-    title: "3D Visualization",
-    category: "Animation",
-    imgUrl: "/images/projects/Group66.png",
+    title: "Visualization",
+    category: "Prototyping",
+    imgUrl: "/images/projects/image 22.png",
   },
 ];
 

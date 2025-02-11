@@ -22,7 +22,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2 text-[#a2a0a0]">
-        <li>New life Christian Academy</li>
+        <li>European University of Lefke</li>
         <li>Udemy</li>
       </ul>
     ),

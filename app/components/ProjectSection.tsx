@@ -15,10 +15,10 @@ const projectData =[
   },
   {
     id: 2,
-    title: "The Idea Hub",
-    description: "An online suggestion box where users can submit their ideas anonymously, ensuring honest and unbiased input.",
-    imgUrl: "/images/projects/thebox.png",
-    linkPath: "https://github.com/conta09/chat-room.git",
+    title: "Omega app",
+    description: "A full-stack web application, Omega App, using Next.js and Tailwind CSS, featuring an interactive dashboard for user account management",
+    imgUrl: "/images/projects/proj1.png",
+    linkPath: "https://omega-prot.vercel.app/",
 
   },
   
@@ -32,9 +32,9 @@ const projectData =[
   },
   {
     id: 4,
-    title: "Fast Food design",
-    description: "Landing page design of a fast food reataurant in kigali,which showcases the menu and prices of the resto",
-    imgUrl: "/images/projects/Group2.png",
+    title: "Chat Room",
+    description: "Built a real-time anonymous chatroom where users can send messages without revealing their identities, similar to a suggestion box with continuous chat flow",
+    imgUrl: "/images/projects/idea.png",
     linkPath: "",
 
   },
