@@ -1,18 +1,11 @@
-// app/api/form/route.ts
 import { NextResponse } from 'next/server';
-import mongoose from 'mongoose';
+import connectMongoDB from '@/lib/mongodb';
 import Contact from '@/models/Contact';
-
-// Connect to MongoDB
-const connectDB = async () => {
-  if (mongoose.connections[0].readyState) return;
-  await mongoose.connect(process.env.MONGODB_URI!);
-};
 
 export async function POST(request: Request) {
   try {
-    // Connect to the database
-    await connectDB();
+    // Connect to MongoDB
+    await connectMongoDB();
 
     // Parse the request body
     const { name, email, message } = await request.json();
@@ -22,12 +15,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
     }
 
-    // Create a new contact document
+    // Create and save the contact document
     const contact = new Contact({ name, email, message });
     await contact.save();
 
     // Return success response
-    return NextResponse.json({ message: 'Message sent successfully!', data: contact }, { status: 201 });
+    return NextResponse.json(
+      { message: 'Message sent successfully!', data: contact },
+      { status: 201 }
+    );
   } catch (error) {
     console.error('Error submitting form:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
