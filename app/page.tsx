@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import ToolStack from "./components/ToolStack";
 import AboutSection from "./components/AboutSection";
 import DesignSection from "./components/DesignSection";
-import Agent from "./components/Agent";
 export default function Home() {
   return (
    <main className="bg-[#121212]">
@@ -14,7 +13,6 @@ export default function Home() {
       <AboutSection />
      <ProjectSection />
      <DesignSection />
-      <Agent />
      <ToolStack />
      <Footer />
    </main>

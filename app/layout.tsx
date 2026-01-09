@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import AIAgent from "./components/AiAgent";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>{children}
+      <AIAgent />
       <Analytics/>
       </body>
     </html>
