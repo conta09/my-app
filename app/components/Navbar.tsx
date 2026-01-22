@@ -11,7 +11,7 @@ const Navbar = () => {
                 
             </Link>
          <div className=" mx-3 ">   
-            <Link href="#projects" className='text-[#727171] font-semibold mr-2  '>Work</Link>
+            <Link href="#mobile" className='text-[#727171] font-semibold mr-2  '>Work</Link>
             <a className='text-[#ED9911] mx-2'  href="/myresume.pdf">Resume</a>
         </div>
         </div>
