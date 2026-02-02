@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -8,27 +10,38 @@ interface ProjectCardProps {
   description: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, linkPath, title, description }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  imageUrl,
+  linkPath,
+  title,
+  description,
+}) => {
   return (
     <div className="group relative h-80 rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-       <Image
+      
+      {/* Background Image */}
+      <Image
         src={imageUrl}
         alt={title}
-        layout="fill"
-        objectFit="cover"
-        className="transition-transform duration-300 group-hover:scale-110"
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-110"
+        priority={false}
       />
-      
+
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
           <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-          <p className="text-gray-300 text-sm mb-4 line-clamp-3">{description}</p>
+          <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+            {description}
+          </p>
+
           {linkPath && (
             <a
               href={linkPath}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-[#FFBF58] text-gray-900 font-medium rounded-md hover:bg-[#ffaa58] transition-colors duration-200"
+              className="relative z-20 inline-flex items-center px-4 py-2 bg-[#FFBF58] text-gray-900 font-medium rounded-md hover:bg-[#ffaa58] transition-colors duration-200"
             >
               View Project
               <svg
@@ -36,7 +49,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, linkPath, title, de
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"
@@ -50,8 +62,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, linkPath, title, de
         </div>
       </div>
 
-      {/* Hover overlay effect */}
-      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Hover Overlay (click-through fix) */}
+      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
     </div>
   );
 };

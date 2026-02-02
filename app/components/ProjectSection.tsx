@@ -18,7 +18,7 @@ const projectData =[
     title: "Omega app",
     description: "A full-stack web application, Omega App, using Next.js and Tailwind CSS, featuring an interactive dashboard for user account management",
     imgUrl: "/images/projects/proj1.png",
-    linkPath: "https://omega-prot.vercel.app/",
+    linkPath: "https://github.com/conta09/omega-prototype.git/",
 
   },
   
@@ -32,11 +32,10 @@ const projectData =[
   },
   {
     id: 4,
-    title: "Chat Room",
-    description: "Built a real-time anonymous chatroom where users can send messages without revealing their identities, similar to a suggestion box with continuous chat flow",
-    imgUrl: "/images/projects/idea.png",
-    linkPath: "",
-
+    title: "Destiny Guided",  
+    description: "A responsive web app showcasing a company that offers services",
+    imgUrl: "/images/projects/destiny.png",
+    linkPath: "https://www.destinyguided.com/",
   },
   {
     id: 5,
@@ -46,7 +45,14 @@ const projectData =[
     linkPath: "",
   },
  
+  {
+    id: 6,
+    title: "Chat Room",
+    description: "Built a real-time anonymous chatroom where users can send messages without revealing their identities, similar to a suggestion box with continuous chat flow",
+    imgUrl: "/images/projects/idea.png",
+    linkPath: "",
 
+  },
 ];
 
 const ProjectSection = () => {
