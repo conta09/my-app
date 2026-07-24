@@ -115,7 +115,7 @@ const AboutSection = () => {
               {/* Rounded Image Container */}
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-800/50">
                 <Image
-                  src="/images/projects/conta.jpg"
+                  src="/images/projects/mee.jpeg"
                   alt="Conta Mucyo"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
